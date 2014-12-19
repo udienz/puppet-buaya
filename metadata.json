@@ -1,0 +1,14 @@
+{
+  "name": "klas-buaya",
+  "version": "0.1.0",
+  "author": "Mahyuddin Susanto",
+  "summary": "Puppet modules for buaya.klas.or.id",
+  "license": "GPLv3+",
+  "source": "https://github.com/udienz/puppet-buaya",
+  "project_page": "https://github.com/udienz/puppet-buaya",
+  "issues_url": "https://github.com/udienz/puppet-buaya/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
