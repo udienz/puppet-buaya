@@ -1,4 +1,4 @@
-class buaya::apache::buaya {
+class buaya::vhost::buaya {
  apache::vhost { 'buaya.klas.or.id':
   serveraliases => [
    'buaya.surabaya.linux.or.id',
