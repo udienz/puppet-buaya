@@ -13,5 +13,5 @@ class { 'apache':
  service_ensure => 'running',
  }
 
-
+include apache
 } # end of buaya::apache::base

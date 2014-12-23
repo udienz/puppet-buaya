@@ -35,6 +35,7 @@ class buaya::vhost::buaya {
 ',
 
  } # end of vhost
+ include apache
  include buaya::vhost::debian
  include buaya::vhost::ubuntu
 }
