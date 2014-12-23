@@ -11,7 +11,7 @@ class buaya::ssh-keys {
 		name    => 'ssh-key-ubuntu-archive',
 		user    => 'ftpmaster',
 		type    => 'rsa',
-		key     => 'AAAAB3NzaC1yc2EAAAABIwAAAQEAt8xHRbCVFT3Uw/B+TavIlDYRoLMxOKlN3HnBeniFUJTto5Im52FbT3ODfMszz5/BIAnXBf1baWDljHErx4huohh9MxyovZ0h8GYCmMy7dZzsrV5eYhLXd2idCOKIl6gr0BTgTlJOKOgVEoZ2YtiU9MnNzRk3gkBeCMDJrnQOCC8Sko0F0RUJnrzLXOdtvDfNu7Ff+tRNb4PwrU3inbm2YJRnOoZI9vIsv/9DwsMm9d+YIIOz/7y5jLGhZ34nXzhmI6cJO92+Ve5ubhbbpKUFQAh2L1PP6A+I7jHvoWHToSaZlt+DCN4Kg+JlZuf2FXk8MeHkEc6qWWHQTFF8/ArKew=='
+		key     => 'AAAAB3NzaC1yc2EAAAABIwAAAQEAt8xHRbCVFT3Uw/B+TavIlDYRoLMxOKlN3HnBeniFUJTto5Im52FbT3ODfMszz5/BIAnXBf1baWDljHErx4huohh9MxyovZ0h8GYCmMy7dZzsrV5eYhLXd2idCOKIl6gr0BTgTlJOKOgVEoZ2YtiU9MnNzRk3gkBeCMDJrnQOCC8Sko0F0RUJnrzLXOdtvDfNu7Ff+tRNb4PwrU3inbm2YJRnOoZI9vIsv/9DwsMm9d+YIIOz/7y5jLGhZ34nXzhmI6cJO92+Ve5ubhbbpKUFQAh2L1PP6A+I7jHvoWHToSaZlt+DCN4Kg+JlZuf2FXk8MeHkEc6qWWHQTFF8/ArKew==',
 		options => 'no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,command="/home/ftpmaster/bin/sedot-bg ubuntu &",from="91.189.92.172"',
 	}
 }
