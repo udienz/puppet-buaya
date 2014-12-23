@@ -37,5 +37,9 @@
 #
 class buaya {
 
+	$base_class = [ 'buaya::apache', 'buaya::basepkg', 'buaya::rsync', 'buaya::users', 'buaya::ssh-keys', 'buaya::vhost::buaya' ]
+	include $base_class
 
 }
+
+# vim:syntax=puppet:set ts=2 sw=2 et:

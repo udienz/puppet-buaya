@@ -35,6 +35,8 @@ class buaya::apache::buaya {
 ',
 
  } # end of vhost
+ include buaya::vhost::debian
+ include buaya::vhost::ubuntu
 }
 
 # vim:syntax=puppet:set ts=2 sw=2 et:
