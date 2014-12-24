@@ -1,4 +1,4 @@
-class buaya::apache::debian {
+class buaya::vhost::debian {
 
  file { '/srv/ftp.debian.org':
 	ensure => 'directory', }

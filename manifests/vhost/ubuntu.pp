@@ -1,4 +1,4 @@
-class buaya::apache::ubuntu {
+class buaya::vhost::ubuntu {
 
  file { '/srv/archive.ubuntu.com':
 	ensure => 'directory', }

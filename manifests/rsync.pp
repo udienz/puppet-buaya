@@ -2,9 +2,11 @@ class buaya::rsync {
  package { 
   'rsync':
  ensure => installed,
- enable => true,
  }
 
+ service { 'rsync':
+ ensure => running,
+ }
  file { '/etc/default/rsync':
  source => 'puppet:///modules/buaya/rsync/etc-default',
  ensure => present,
