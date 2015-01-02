@@ -20,6 +20,7 @@ class buaya::vhost::debian {
   ],
   port                    => '80',
   docroot                 => '/srv/ftp.debian.org',
+  add_default_charset	 => 'text/plain',
   directories             => [
    { 'path'               => '/srv/ftp.debian.org',
      'options'            => ['Indexes', 'SymLinksIfOwnerMatch', 'Multiviews'],

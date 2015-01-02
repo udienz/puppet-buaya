@@ -1,11 +1,14 @@
 class buaya::vhost::buaya {
+
  apache::vhost { 'buaya.klas.or.id':
   serveraliases => [
    'buaya.surabaya.linux.or.id',
    'buaya.sby.rad.net.id',
+   'crocodile.klas.or.id',
   ],
   port                    => '80',
   docroot                 => '/srv/ftp',
+  add_default_charset	 => 'text/plain',
   directories             => [
    { 'path'               => '/srv/ftp',
      'options'            => ['Indexes', 'FollowSymLinks', 'Multiviews'],
@@ -49,7 +52,6 @@ class buaya::vhost::buaya {
 ',
 
  } # end of vhost
-# include apache
  #include buaya::vhost::debian
  #include buaya::vhost::ubuntu
 }

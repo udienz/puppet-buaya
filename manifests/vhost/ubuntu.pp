@@ -19,6 +19,7 @@ class buaya::vhost::ubuntu {
   ],
   port                    => '80',
   docroot                 => '/srv/archive.ubuntu.com',
+  add_default_charset	 => 'text/plain',
   directories             => [
    { 'path'               => '/srv/archive.ubuntu.com',
      'options'            => ['Indexes', 'SymLinksIfOwnerMatch', 'Multiviews'],

@@ -3,7 +3,8 @@ class buaya::www {
 class { 'apache':
 # default_mods  => false,
 # default_confd_files => true,
- docroot => '/var/www/html',
+ docroot => '/ftp/',
+# default_vhost => false,
  logroot => '/var/log/apache2',
  package_ensure => 'present',
  serveradmin => 'hostmaster@sby.rad.net.id',
@@ -17,6 +18,7 @@ class { 'apache':
 include buaya::vhost::buaya
 include buaya::vhost::ubuntu
 include buaya::vhost::debian
+include buaya::vhost::puppetlabs
 
 include apache
 
