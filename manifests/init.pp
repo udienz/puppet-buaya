@@ -37,7 +37,7 @@
 #
 class buaya {
 
-	$base_class = [ 'buaya::www', 'buaya::basepkg', 'buaya::rsync', 'buaya::users', 'buaya::ssh-keys', 'buaya::cron' ]
+	$base_class = [ 'buaya::www', 'buaya::basepkg', 'buaya::rsync', 'buaya::users', 'buaya::ssh-keys', 'buaya::cron', 'buaya::webalizer' ]
 	include $base_class
 
 }
