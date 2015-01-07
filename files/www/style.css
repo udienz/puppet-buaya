@@ -1,0 +1,86 @@
+body {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+img {
+	border: 0;
+}
+
+h1 {
+	font-family: monospace;
+	font-size: 3em;
+	margin: 0;
+	margin-top: 0px;
+}
+
+#header p {
+	margin: 0;
+}
+
+#header table {
+	text-align: center;
+	width: 100%;
+	padding: 1% 0 1% 0;
+	clear: both;
+	height: 100px;
+}
+
+#header table td.bwbar {
+	border-bottom: 2px #820 solid;
+	border-top: 2px #820 solid;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#container td {
+	vertical-align: top;
+}
+
+#content {
+	border-bottom: 2px #820 solid;
+	font-family: 'Lucida Grande', "Trebuchet MS", Helvetica, Geneva, Lucida, Arial, sans-serif;
+	font-size: 90%;
+}
+
+#content dt {
+	color: #950;
+	font-weight: bold;
+}
+
+#content dd {
+	margin-bottom: .5em;
+}
+
+#server {
+	margin-left: 10px;
+	border: 0px #000 solid;
+	padding: 4px;
+	display: block;
+}
+
+#buaya_footer {
+	font-size: .8em;
+}
+
+div.stdout {
+	color: #080;
+}
+
+div.stderr {
+	color: #800;
+}
+
+#content table {
+	padding: 1em;
+}
+
+#content table td {
+	padding-left: 4em;
+	padding-top: .5em;
+}
+
+#content table th {
+	padding-left: 4em;
+}
+

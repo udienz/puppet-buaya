@@ -41,6 +41,32 @@ class buaya::cron::suro {
    special => 'reboot'
  }
 
+  cron { 'pkg-debian':
+  command => '$HOME/bin/sedot debian > /dev/null 2>&1',
+  user => 'ftpmaster',
+  minute => '0',
+  hour => [1, 4, 7, 10, 13, 17, 20, 23]
+  }
+
+  cron { 'pkg apt-puppetlabs':
+  command => '$HOME/bin/sedot apt-puppetlabs > /dev/null 2>&1',
+  user => 'ftpmaster',
+  minute => '0',
+  hour => '21',
+  }
+
+  cron { 'pkg yum-puppetlabs':
+  command => '$HOME/bin/sedot yum-puppetlabs > /dev/null 2>&1',
+  user => 'ftpmaster',
+  minute => '0',
+  hour => '5',
+  }
+  cron { 'pkg ubuntu-cdimage':
+  command => '$HOME/bin/sedot ubuntu-cdimage > /dev/null 2>&1',
+  user => 'ftpmaster',
+  minute => '0',
+  hour => '1',
+  }
 
 } # end of cronjob
 
