@@ -41,7 +41,19 @@ class buaya::cron::suro {
    special => 'reboot'
  }
 
+ file { '/ftp/.dm03/yum.puppetlabs.com/':
+  ensure => 'directory',
+  owner => 'ftpmaster',
+  group => 'ftpmaster',
+  recurse => 'true',
+ }
 
+ file { '/ftp/.dm03/apt.puppetlabs.com/':
+  ensure => 'directory',
+  owner => 'ftpmaster',
+  group => 'ftpmaster',
+  recurse => 'true',
+ }
 } # end of cronjob
 
 # vim:syntax=puppet:set ts=2 sw=2 et:
