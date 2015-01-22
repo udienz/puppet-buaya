@@ -1,12 +1,7 @@
 class buaya::dir {
 
-#include '::apache::mod::dir'
 
-apache::mod { 'dir': }
 
-class { '::apache::mod::dir':
- indexes => [ 'index.html', 'index.cgi', 'index.pl', 'index.php', ]
-}
 
 
 }
