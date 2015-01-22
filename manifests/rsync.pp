@@ -21,5 +21,11 @@ class buaya::rsync {
  owner => 'ftpmaster',
  }
 
+ file { '/usr/local/bin/rsync2xferlog.py':
+# source => 'puppet:///modules/buaya/rsync/rsync2xferlog.py',
+ ensure => 'absent',
+# mode => '755',
+# owner => 'ftpmaster',
+ }
 }
 # vim:syntax=puppet:set ts=2 sw=2 et:
