@@ -19,8 +19,10 @@ include buaya::vhost::buaya
 include buaya::vhost::ubuntu
 include buaya::vhost::debian
 include buaya::vhost::puppetlabs
+include buaya::content::self
 
 include apache
+
 
 } # end of buaya::apache::base
 # vim:syntax=puppet:set ts=2 sw=2 et:
