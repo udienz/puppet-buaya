@@ -18,7 +18,9 @@ class { 'apache':
 include buaya::vhost::buaya
 include buaya::vhost::ubuntu
 include buaya::vhost::debian
+include buaya::vhost::autoinstall
 include buaya::vhost::puppetlabs
+include buaya::vhost::vagrant
 
 include apache
 

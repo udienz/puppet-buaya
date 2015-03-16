@@ -1,12 +1,15 @@
 class buaya::vhost::ubuntu {
 
  file { '/srv/archive.ubuntu.com':
-	ensure => 'directory', }
+	ensure => 'directory', 
+	owner => 'ftpmaster', }
  file { '/srv/archive.ubuntu.com/ubuntu': 
  	ensure => 'link',
+	owner => 'ftpmaster', 
 	target => '/srv/ftp/ubuntu', }
  file { [ '/srv/archive.ubuntu.com/ubuntu-cd', '/srv/archive.ubuntu.com/ubuntu-releases' ]: 
  	ensure => 'link',
+	owner => 'ftpmaster', 
  	target => '/srv/ftp/iso/ubuntu/releases/', }
 
 
@@ -16,6 +19,7 @@ class buaya::vhost::ubuntu {
    'uk.archive.ubuntu.com',
    'sg.archive.ubuntu.com',
    'archive.ubuntu.com',
+   'ubuntu.klas.or.id',
   ],
   port                    => '80',
   docroot                 => '/srv/archive.ubuntu.com',

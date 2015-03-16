@@ -1,5 +1,10 @@
 class buaya::vhost::buaya {
 
+ file { '/ftp/CentOS':
+    ensure => 'link',
+    target => 'centos',
+ }
+
  apache::vhost { 'buaya.klas.or.id':
   serveraliases => [
    'buaya.surabaya.linux.or.id',
@@ -15,7 +20,8 @@ class buaya::vhost::buaya {
      'directoryindex'	  =>  'index.html index.cgi index.pl index.php',
      #'directoryindex'	  => ['index.html', 'index.cgi', 'index.pl', 'index.php' ],
      'index_options'      => ['IgnoreCase', 'FancyIndexing', 'FoldersFirst' ],
-     'allow_override'     => [ 'FileInfo', 'Indexes' ],    
+     'allow_override'     => [ 'All' ],    
+     #'allow_override'     => [ 'FileInfo', 'Indexes' ],    
    },
     { 'path'               => '/home/ftpmaster/status/data/report',
      'options'            => ['Indexes', 'SymLinksIfOwnerMatch', 'Multiviews'],
