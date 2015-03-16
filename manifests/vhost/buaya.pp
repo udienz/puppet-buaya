@@ -44,7 +44,10 @@ class buaya::vhost::buaya {
    { alias               => '/status/log',
      path                => '/home/ftpmaster/status/log/sync',
    },
-  ],
+   { alias               => '/README.html',
+     path                => '/srv/ftp/README.html',
+   },
+ ],
 
  custom_fragment => '
    <Directory /home/ftpmaster/status/data/report>
@@ -55,11 +58,37 @@ class buaya::vhost::buaya {
      AddType text/plain gz
      AddEncoding x-gzip gz
    </Directory>
+    ReadmeName /README.html
+#    HeaderName /HEADER.html
 ',
 
  } # end of vhost
  #include buaya::vhost::debian
  #include buaya::vhost::ubuntu
+ file { '/srv/ftp/.htaccess':
+  ensure => 'present',
+  owner => 'ftpmaster',
+  group => 'ftpmaster',
+  source => 'puppet:///modules/buaya/htaccess/root.htaccess', 
+ }
+ file { '/srv/ftp/HEADER.html':
+  ensure => 'link',
+  owner => 'ftpmaster',
+  group => 'ftpmaster',
+  target => '.self/HEADER.html',
+ }
+  file { '/srv/ftp/README.html':
+  ensure => 'link',
+  owner => 'ftpmaster',
+  group => 'ftpmaster',
+  target => '.self/README.html',
+ }
+ file { '/ftp/iso/ubuntu/cdimage':
+  ensure => 'link',
+  owner => 'ftpmaster',
+  group => 'ftpmaster',
+  target => '../../.dm03/cdimage.ubuntu.com/',
+ }
 }
 
 # vim:syntax=puppet:set ts=2 sw=2 et:

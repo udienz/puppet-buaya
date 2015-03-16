@@ -21,8 +21,10 @@ include buaya::vhost::debian
 include buaya::vhost::autoinstall
 include buaya::vhost::puppetlabs
 include buaya::vhost::vagrant
+include buaya::content::self
 
 include apache
+
 
 } # end of buaya::apache::base
 # vim:syntax=puppet:set ts=2 sw=2 et:
